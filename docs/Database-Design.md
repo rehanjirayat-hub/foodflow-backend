@@ -182,3 +182,99 @@ The FoodFlow Backend system contains the following entities.
 | full_name | VARCHAR(100) | Not Null |
 | email | VARCHAR(100) | Unique, Not Null |
 | password | VARCHAR(255) | Not Null |
+
+---
+
+# 6. Table Relationships
+
+The following relationships exist between the database entities.
+
+| Parent Table | Child Table | Relationship |
+|--------------|-------------|--------------|
+| Customer | Cart | One Customer → One Cart (1:1) |
+| Customer | Order | One Customer → Many Orders (1:N) |
+| Restaurant | FoodItem | One Restaurant → Many Food Items (1:N) |
+| Restaurant | Order | One Restaurant → Many Orders (1:N) |
+| Cart | CartItem | One Cart → Many Cart Items (1:N) |
+| FoodItem | CartItem | One Food Item → Many Cart Items (1:N) |
+| Order | OrderItem | One Order → Many Order Items (1:N) |
+| FoodItem | OrderItem | One Food Item → Many Order Items (1:N) |
+| Order | Payment | One Order → One Payment (1:1) |
+
+---
+
+# 7. Foreign Keys
+
+| Table | Foreign Key | References |
+|--------|-------------|------------|
+| FoodItem | restaurant_id | Restaurant(restaurant_id) |
+| Cart | customer_id | Customer(customer_id) |
+| CartItem | cart_id | Cart(cart_id) |
+| CartItem | food_id | FoodItem(food_id) |
+| Order | customer_id | Customer(customer_id) |
+| Order | restaurant_id | Restaurant(restaurant_id) |
+| OrderItem | order_id | Order(order_id) |
+| OrderItem | food_id | FoodItem(food_id) |
+| Payment | order_id | Order(order_id) |
+
+---
+
+# 8. Normalization
+
+The database follows the Third Normal Form (3NF).
+
+### First Normal Form (1NF)
+
+- Every table contains atomic values.
+- Repeating groups are removed.
+
+### Second Normal Form (2NF)
+
+- Every non-key attribute depends on the entire primary key.
+
+### Third Normal Form (3NF)
+
+- No transitive dependencies exist.
+- Non-key attributes depend only on the primary key.
+
+This design reduces data redundancy and improves consistency.
+
+---
+
+# 9. Database Constraints
+
+The following constraints are applied throughout the database.
+
+## Primary Key
+
+Every table contains a unique primary key.
+
+## Foreign Key
+
+Foreign keys maintain relationships between related tables.
+
+## Unique
+
+Email addresses and mobile numbers must be unique where applicable.
+
+## Not Null
+
+Mandatory fields cannot contain NULL values.
+
+## Default Values
+
+Default values are used for:
+
+- created_at
+- order_status
+- payment_status
+- availability
+- total_amount
+
+---
+
+# 10. Conclusion
+
+The FoodFlow database is designed using a normalized relational structure. The design minimizes data redundancy, maintains referential integrity, and supports all functional requirements of the application.
+
+This database structure will be used to create the MySQL schema and later mapped to Java model classes, repository implementations, and service layer logic.
