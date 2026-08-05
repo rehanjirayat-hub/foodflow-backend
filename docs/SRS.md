@@ -66,6 +66,8 @@ This document is prepared for:
 | Customer | User who places food orders |
 | Restaurant | Business that offers food through the system |
 
+
+Section 1.4
 # 2. Overall Description
 
 ## 2.1 Product Perspective
@@ -177,3 +179,114 @@ The following assumptions are made during development.
 - Java 21 is installed on the development machine.
 - Maven is available through IntelliJ IDEA.
 - Internet access is required only for downloading Maven dependencies and pushing code to GitHub.
+
+Section 1.6
+# 3. Functional Requirements
+
+The FoodFlow Backend system provides the following functional requirements.
+
+### FR-1 User Registration
+
+The system shall allow customers and restaurant managers to register by providing the required information.
+
+### FR-2 User Login
+
+The system shall authenticate users using their registered email or username and password.
+
+### FR-3 Restaurant Management
+
+The system shall allow restaurant managers to add, update, view, and remove food items from their menu.
+
+### FR-4 Food Browsing
+
+The system shall allow customers to browse restaurants and view available food items.
+
+### FR-5 Cart Management
+
+The system shall allow customers to add food items to the cart, update quantities, remove items, and view the cart before placing an order.
+
+### FR-6 Order Management
+
+The system shall allow customers to place orders, view order history, and cancel eligible orders.
+
+Restaurant managers shall be able to accept, reject, and update the status of customer orders.
+
+### FR-7 Payment
+
+The system shall support simulated payment methods such as Cash on Delivery, UPI, and Card.
+
+### FR-8 Administration
+
+The administrator shall be able to manage customers, restaurants, and monitor all orders.
+
+---
+
+# 4. Non-Functional Requirements
+
+The system shall satisfy the following quality requirements.
+
+## Performance
+
+The application should respond quickly during normal operations.
+
+## Reliability
+
+Data should remain consistent during CRUD operations.
+
+## Maintainability
+
+The project should follow layered architecture so that changes in one layer have minimal impact on other layers.
+
+## Usability
+
+The console menus should be simple, consistent, and easy to understand.
+
+## Security
+
+Basic input validation shall be performed before processing user requests.
+
+Passwords should not be displayed after user login.
+
+---
+
+# 5. Assumptions and Limitations
+
+The following assumptions apply to this project.
+
+- The application runs on a single computer.
+- Only one database server is used.
+- Payment processing is simulated.
+- Internet access is required only for downloading dependencies and pushing changes to GitHub.
+
+Current limitations include:
+
+- No web interface
+- No mobile application
+- No live delivery tracking
+- No real payment gateway
+- No email or SMS notifications
+
+---
+
+# 6. Future Enhancements
+
+The following features can be added in future versions.
+
+- Spring Boot REST APIs
+- React or Angular frontend
+- Mobile application
+- JWT authentication
+- Online payment gateway integration
+- Email notifications
+- Delivery partner location tracking
+- Docker deployment
+- Cloud hosting
+- Admin dashboard
+
+---
+
+# 7. Conclusion
+
+The Software Requirements Specification defines the overall objectives, scope, functional requirements, and design constraints of the FoodFlow Backend project.
+
+This document serves as the foundation for the remaining development phases, including database design, architecture, implementation, testing, and deployment.
