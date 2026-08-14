@@ -1,43 +1,45 @@
 package com.rehan.foodflow.model;
 import java.math.BigDecimal;
-import com.rehan.foodflow.enums.FoodItemStatus;
+import java.time.LocalDateTime;
 
 public class FoodItem {
-    private long foodItemId;
+    private long foodId;
     private long restaurantId;
     private String foodName;
     private String category;
-    private String description;
     private BigDecimal price;
-    private FoodItemStatus availabilityStatus;
+    private Boolean availability;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
 
     public FoodItem() {
     }
 
-    public FoodItem(long restaurantId, String foodName, String category, String description, BigDecimal price) {
+    public FoodItem(long restaurantId, String foodName, String category, BigDecimal price, Boolean availability) {
         this.restaurantId = restaurantId;
         this.foodName = foodName;
         this.category = category;
-        this.description = description;
         this.price = price;
+        this.availability = availability;
     }
 
-    public FoodItem(long foodItemId, long restaurantId, String foodName, String category, String description, BigDecimal price, FoodItemStatus availabilityStatus) {
-        this.foodItemId = foodItemId;
+    public FoodItem(long foodId, long restaurantId, String foodName, String category, BigDecimal price, Boolean availability, LocalDateTime createdAt, LocalDateTime updatedAt) {
+        this.foodId = foodId;
         this.restaurantId = restaurantId;
         this.foodName = foodName;
         this.category = category;
-        this.description = description;
         this.price = price;
-        this.availabilityStatus = availabilityStatus;
+        this.availability = availability;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
-    public long getFoodItemId() {
-        return foodItemId;
+    public long getFoodId() {
+        return foodId;
     }
 
-    public void setFoodItemId(long foodItemId) {
-        this.foodItemId = foodItemId;
+    public void setFoodId(long foodId) {
+        this.foodId = foodId;
     }
 
     public long getRestaurantId() {
@@ -64,14 +66,6 @@ public class FoodItem {
         this.category = category;
     }
 
-    public String getDescription() {
-        return description;
-    }
-
-    public void setDescription(String description) {
-        this.description = description;
-    }
-
     public BigDecimal getPrice() {
         return price;
     }
@@ -80,24 +74,41 @@ public class FoodItem {
         this.price = price;
     }
 
-    public FoodItemStatus getAvailabilityStatus() {
-        return availabilityStatus;
+    public Boolean getAvailability() {
+        return availability;
     }
 
-    public void setAvailabilityStatus(FoodItemStatus availabilityStatus) {
-        this.availabilityStatus = availabilityStatus;
+    public void setAvailability(Boolean availability) {
+        this.availability = availability;
+    }
+
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
     public String toString() {
         return "FoodItem{" +
-                "foodItemId=" + foodItemId +
+                "foodId=" + foodId +
                 ", restaurantId=" + restaurantId +
                 ", foodName='" + foodName + '\'' +
                 ", category='" + category + '\'' +
-                ", description='" + description + '\'' +
                 ", price=" + price +
-                ", availabilityStatus=" + availabilityStatus +
+                ", availability=" + availability +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }
