@@ -2,6 +2,8 @@ package com.rehan.foodflow.model;
 
 import com.rehan.foodflow.enums.RestaurantStatus;
 
+import java.time.LocalDateTime;
+
 public class Restaurant {
     private long restaurantId;
     private String restaurantName;
@@ -11,20 +13,24 @@ public class Restaurant {
     private String address;
     private String password;
     private RestaurantStatus status;
+    private LocalDateTime createdAt;
+    private LocalDateTime updatedAt;
+
 
     public Restaurant() {
     }
 
-    public Restaurant(String restaurantName, String ownerName, String email, String mobileNumber, String address, String password) {
+    public Restaurant(String restaurantName, String ownerName, String email, String mobileNumber, String address, String password, RestaurantStatus status) {
         this.restaurantName = restaurantName;
         this.ownerName = ownerName;
         this.email = email;
         this.mobileNumber = mobileNumber;
         this.address = address;
         this.password = password;
+        this.status = status;
     }
 
-    public Restaurant(long restaurantId, String restaurantName, String ownerName, String email, String mobileNumber, String address, String password, RestaurantStatus status) {
+    public Restaurant(long restaurantId, String restaurantName, String ownerName, String email, String mobileNumber, String address, String password, RestaurantStatus status, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.restaurantId = restaurantId;
         this.restaurantName = restaurantName;
         this.ownerName = ownerName;
@@ -33,6 +39,8 @@ public class Restaurant {
         this.address = address;
         this.password = password;
         this.status = status;
+        this.createdAt = createdAt;
+        this.updatedAt = updatedAt;
     }
 
     public long getRestaurantId() {
@@ -99,6 +107,22 @@ public class Restaurant {
         this.status = status;
     }
 
+    public LocalDateTime getCreatedAt() {
+        return createdAt;
+    }
+
+    public void setCreatedAt(LocalDateTime createdAt) {
+        this.createdAt = createdAt;
+    }
+
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
+    }
+
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
+    }
+
     @Override
     public String toString() {
         return "Restaurant{" +
@@ -110,6 +134,8 @@ public class Restaurant {
                 ", address='" + address + '\'' +
                 ", password='" + password + '\'' +
                 ", status=" + status +
+                ", createdAt=" + createdAt +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }
