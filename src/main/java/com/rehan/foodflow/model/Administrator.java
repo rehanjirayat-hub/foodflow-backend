@@ -8,7 +8,7 @@ public class Administrator {
     private String email;
     private String password;
     private LocalDateTime createdAt;
-    private LocalDateTime updaedAt;
+    private LocalDateTime updatedAt;
 
     public Administrator() {
     }
@@ -25,7 +25,7 @@ public class Administrator {
         this.email = email;
         this.password = password;
         this.createdAt = createdAt;
-        this.updaedAt = updaedAt;
+        this.updatedAt = updaedAt;
     }
 
     public long getAdmitId() {
@@ -69,11 +69,11 @@ public class Administrator {
     }
 
     public LocalDateTime getUpdaedAt() {
-        return updaedAt;
+        return updatedAt;
     }
 
     public void setUpdaedAt(LocalDateTime updaedAt) {
-        this.updaedAt = updaedAt;
+        this.updatedAt = updaedAt;
     }
 
     @Override
@@ -84,7 +84,7 @@ public class Administrator {
                 ", email='" + email + '\'' +
                 ", password='" + password + '\'' +
                 ", createdAt=" + createdAt +
-                ", updaedAt=" + updaedAt +
+                ", updaedAt=" + updatedAt +
                 '}';
     }
 }
