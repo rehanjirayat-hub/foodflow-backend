@@ -19,7 +19,7 @@ public class Order {
     public Order() {
     }
 
-    public Order(long customerId, long restaurantId, BigDecimal totalAmount,) {
+    public Order(long customerId, long restaurantId, BigDecimal totalAmount) {
         this.customerId = customerId;
         this.restaurantId = restaurantId;
         this.totalAmount = totalAmount;
