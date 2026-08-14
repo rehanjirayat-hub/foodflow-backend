@@ -5,30 +5,28 @@ import java.math.BigDecimal;
 public class OrderItem {
     private long orderItemId;
     private long orderId;
-    private long foodItemId;
-    private String foodName;
+    private long foodId;
     private int quantity;
-    private BigDecimal unitPrice;
+    private BigDecimal price;
     private BigDecimal subTotal;
 
     public OrderItem() {
     }
 
-    public OrderItem(long orderId, long foodItemId, String foodName, int quantity, BigDecimal unitPrice) {
+    public OrderItem(long orderId, long foodId, int quantity, BigDecimal price, BigDecimal subTotal) {
         this.orderId = orderId;
-        this.foodItemId = foodItemId;
-        this.foodName = foodName;
+        this.foodId = foodId;
         this.quantity = quantity;
-        this.unitPrice = unitPrice;
+        this.price = price;
+        this.subTotal = subTotal;
     }
 
-    public OrderItem(long orderItemId, long orderId, long foodItemId, String foodName, int quantity, BigDecimal unitPrice, BigDecimal subTotal) {
+    public OrderItem(long orderItemId, long orderId, long foodId, int quantity, BigDecimal price, BigDecimal subTotal) {
         this.orderItemId = orderItemId;
         this.orderId = orderId;
-        this.foodItemId = foodItemId;
-        this.foodName = foodName;
+        this.foodId = foodId;
         this.quantity = quantity;
-        this.unitPrice = unitPrice;
+        this.price = price;
         this.subTotal = subTotal;
     }
 
@@ -48,20 +46,12 @@ public class OrderItem {
         this.orderId = orderId;
     }
 
-    public long getFoodItemId() {
-        return foodItemId;
+    public long getFoodId() {
+        return foodId;
     }
 
-    public void setFoodItemId(long foodItemId) {
-        this.foodItemId = foodItemId;
-    }
-
-    public String getFoodName() {
-        return foodName;
-    }
-
-    public void setFoodName(String foodName) {
-        this.foodName = foodName;
+    public void setFoodId(long foodId) {
+        this.foodId = foodId;
     }
 
     public int getQuantity() {
@@ -72,12 +62,12 @@ public class OrderItem {
         this.quantity = quantity;
     }
 
-    public BigDecimal getUnitPrice() {
-        return unitPrice;
+    public BigDecimal getPrice() {
+        return price;
     }
 
-    public void setUnitPrice(BigDecimal unitPrice) {
-        this.unitPrice = unitPrice;
+    public void setPrice(BigDecimal price) {
+        this.price = price;
     }
 
     public BigDecimal getSubTotal() {
@@ -93,10 +83,9 @@ public class OrderItem {
         return "OrderItem{" +
                 "orderItemId=" + orderItemId +
                 ", orderId=" + orderId +
-                ", foodItemId=" + foodItemId +
-                ", foodName='" + foodName + '\'' +
+                ", foodId=" + foodId +
                 ", quantity=" + quantity +
-                ", unitPrice=" + unitPrice +
+                ", price=" + price +
                 ", subTotal=" + subTotal +
                 '}';
     }
