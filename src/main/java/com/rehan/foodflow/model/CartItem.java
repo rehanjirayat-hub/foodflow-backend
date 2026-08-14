@@ -1,26 +1,38 @@
 package com.rehan.foodflow.model;
 
-public class CartItem {
-    private long cartId;
-    private long customerId;
-    private long foodItemId;
-    private int quantity;
+import java.math.BigDecimal;
 
+public class CartItem {
+    private long cartItemId;
+    private long cartId;
+    private long foodId;
+    private int quantity;
+    private BigDecimal subTotal;
 
     public CartItem() {
     }
 
-    public CartItem(long customerId, long foodItemId, int quantity) {
-        this.customerId = customerId;
-        this.foodItemId = foodItemId;
+    public CartItem(long cartId, long foodId, int quantity, BigDecimal subTotal) {
+        this.cartId = cartId;
+        this.foodId = foodId;
         this.quantity = quantity;
+        this.subTotal = subTotal;
     }
 
-    public CartItem(long cartId, long customerId, long foodItemId, int quantity) {
+    public CartItem(long cartItemId, long cartId, long foodId, int quantity, BigDecimal subTotal) {
+        this.cartItemId = cartItemId;
         this.cartId = cartId;
-        this.customerId = customerId;
-        this.foodItemId = foodItemId;
+        this.foodId = foodId;
         this.quantity = quantity;
+        this.subTotal = subTotal;
+    }
+
+    public long getCartItemId() {
+        return cartItemId;
+    }
+
+    public void setCartItemId(long cartItemId) {
+        this.cartItemId = cartItemId;
     }
 
     public long getCartId() {
@@ -31,20 +43,12 @@ public class CartItem {
         this.cartId = cartId;
     }
 
-    public long getCustomerId() {
-        return customerId;
+    public long getFoodId() {
+        return foodId;
     }
 
-    public void setCustomerId(long customerId) {
-        this.customerId = customerId;
-    }
-
-    public long getFoodItemId() {
-        return foodItemId;
-    }
-
-    public void setFoodItemId(long foodItemId) {
-        this.foodItemId = foodItemId;
+    public void setFoodId(long foodId) {
+        this.foodId = foodId;
     }
 
     public int getQuantity() {
@@ -55,13 +59,22 @@ public class CartItem {
         this.quantity = quantity;
     }
 
+    public BigDecimal getSubTotal() {
+        return subTotal;
+    }
+
+    public void setSubTotal(BigDecimal subTotal) {
+        this.subTotal = subTotal;
+    }
+
     @Override
     public String toString() {
         return "CartItem{" +
-                "cartId=" + cartId +
-                ", customerId=" + customerId +
-                ", foodItemId=" + foodItemId +
+                "cartItemId=" + cartItemId +
+                ", cartId=" + cartId +
+                ", foodId=" + foodId +
                 ", quantity=" + quantity +
+                ", subTotal=" + subTotal +
                 '}';
     }
 }
