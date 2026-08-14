@@ -9,35 +9,31 @@ import java.time.LocalDateTime;
 public class Order {
     private long orderId;
     private long customerId;
-    private  long restaurantId;
-    private OrderStatus status;
+    private long  restaurantId;
     private BigDecimal totalAmount;
+    private OrderStatus orderStatus;
+    private LocalDateTime orderDate;
     private LocalDateTime createdAt;
-    private String deliveryAddress;
-    private PaymentMethod paymentMethod;
-    private PaymentStatus paymentStatus;
+    private LocalDateTime updatedAt;
 
     public Order() {
     }
 
-    public Order(long customerId, long restaurantId, BigDecimal totalAmount, String deliveryAddress, PaymentMethod paymentMethod, PaymentStatus paymentStatus) {
+    public Order(long customerId, long restaurantId, BigDecimal totalAmount,) {
         this.customerId = customerId;
         this.restaurantId = restaurantId;
         this.totalAmount = totalAmount;
-        this.deliveryAddress = deliveryAddress;
-        this.paymentMethod = paymentMethod;
     }
 
-    public Order(long orderId, long customerId, long restaurantId, OrderStatus status, BigDecimal totalAmount, LocalDateTime createdAt, String deliveryAddress, PaymentMethod paymentMethod, PaymentStatus paymentStatus) {
+    public Order(long orderId, long customerId, long restaurantId, BigDecimal totalAmount, OrderStatus orderStatus, LocalDateTime orderDate, LocalDateTime createdAt, LocalDateTime updatedAt) {
         this.orderId = orderId;
         this.customerId = customerId;
         this.restaurantId = restaurantId;
-        this.status = status;
         this.totalAmount = totalAmount;
+        this.orderStatus = orderStatus;
+        this.orderDate = orderDate;
         this.createdAt = createdAt;
-        this.deliveryAddress = deliveryAddress;
-        this.paymentMethod = paymentMethod;
-        this.paymentStatus = paymentStatus;
+        this.updatedAt = updatedAt;
     }
 
     public long getOrderId() {
@@ -64,20 +60,28 @@ public class Order {
         this.restaurantId = restaurantId;
     }
 
-    public OrderStatus getStatus() {
-        return status;
-    }
-
-    public void setStatus(OrderStatus status) {
-        this.status = status;
-    }
-
     public BigDecimal getTotalAmount() {
         return totalAmount;
     }
 
     public void setTotalAmount(BigDecimal totalAmount) {
         this.totalAmount = totalAmount;
+    }
+
+    public OrderStatus getOrderStatus() {
+        return orderStatus;
+    }
+
+    public void setOrderStatus(OrderStatus orderStatus) {
+        this.orderStatus = orderStatus;
+    }
+
+    public LocalDateTime getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(LocalDateTime orderDate) {
+        this.orderDate = orderDate;
     }
 
     public LocalDateTime getCreatedAt() {
@@ -88,28 +92,12 @@ public class Order {
         this.createdAt = createdAt;
     }
 
-    public String getDeliveryAddress() {
-        return deliveryAddress;
+    public LocalDateTime getUpdatedAt() {
+        return updatedAt;
     }
 
-    public void setDeliveryAddress(String deliveryAddress) {
-        this.deliveryAddress = deliveryAddress;
-    }
-
-    public PaymentMethod getPaymentMethod() {
-        return paymentMethod;
-    }
-
-    public void setPaymentMethod(PaymentMethod paymentMethod) {
-        this.paymentMethod = paymentMethod;
-    }
-
-    public PaymentStatus getPaymentStatus() {
-        return paymentStatus;
-    }
-
-    public void setPaymentStatus(PaymentStatus paymentStatus) {
-        this.paymentStatus = paymentStatus;
+    public void setUpdatedAt(LocalDateTime updatedAt) {
+        this.updatedAt = updatedAt;
     }
 
     @Override
@@ -118,12 +106,11 @@ public class Order {
                 "orderId=" + orderId +
                 ", customerId=" + customerId +
                 ", restaurantId=" + restaurantId +
-                ", status=" + status +
                 ", totalAmount=" + totalAmount +
+                ", orderStatus=" + orderStatus +
+                ", orderDate=" + orderDate +
                 ", createdAt=" + createdAt +
-                ", deliveryAddress='" + deliveryAddress + '\'' +
-                ", paymentMethod=" + paymentMethod +
-                ", paymentStatus=" + paymentStatus +
+                ", updatedAt=" + updatedAt +
                 '}';
     }
 }
