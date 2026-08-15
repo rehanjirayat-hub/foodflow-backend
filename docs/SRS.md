@@ -2,17 +2,17 @@
 
 ## Project Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Project Type | Console-Based Food Delivery Backend System |
-| Version | 1.0 |
-| Document Version | 1.0 |
-| Status | Draft |
-| Prepared By | Mohammed Rehan Anwarsab Jirayat |
+| Field            | Details                                         |
+|------------------|-------------------------------------------------|
+| Project Name     | FoodFlow Backend                                |
+| Project Type     | Console-Based Food Delivery Backend System      |
+| Version          | 1.0                                             |
+| Document Version | 1.0                                             |
+| Status           | Draft                                           |
+| Prepared By      | Mohammed Rehan Anwarsab Jirayat                 |
 | Technology Stack | Java 21, Core Java, JDBC, MySQL, Maven, JUnit 5 |
-| Architecture | Layered Architecture |
-| Last Updated | August 2026 |
+| Architecture     | Layered Architecture                            |
+| Last Updated     | August 2026                                     |
 
 ---
 
@@ -20,9 +20,14 @@
 
 ## 1.1 Purpose
 
-FoodFlow Backend is a console-based Java application developed to understand how a food delivery platform works behind the scenes. The project focuses on the backend logic required to manage customers, restaurants, food items, orders, payments, and deliveries.
+FoodFlow Backend is a console-based Java application developed to understand how a food delivery platform works behind
+the scenes. The project focuses on the backend logic required to manage customers, restaurants, food items, orders,
+payments, and deliveries.
 
-The main objective of this project is to apply Core Java concepts in a structured way by using object-oriented programming, layered architecture, JDBC, MySQL, exception handling, and the Collections Framework. The project is also intended to serve as a portfolio project for Java Backend Developer internships and entry-level software development roles.
+The main objective of this project is to apply Core Java concepts in a structured way by using object-oriented
+programming, layered architecture, JDBC, MySQL, exception handling, and the Collections Framework. The project is also
+intended to serve as a portfolio project for Java Backend Developer internships and entry-level software development
+roles.
 
 ---
 
@@ -30,13 +35,15 @@ The main objective of this project is to apply Core Java concepts in a structure
 
 The system provides the core backend features required for a food delivery application.
 
-The application allows customers to create an account, browse restaurants, view menus, add food items to a cart, place orders, and check their order history.
+The application allows customers to create an account, browse restaurants, view menus, add food items to a cart, place
+orders, and check their order history.
 
 Restaurant managers can manage food items, update menu information, and process customer orders.
 
 Administrators can manage customers, restaurants, and monitor the overall system.
 
-The application is developed as a console-based system using Java and MySQL. It is designed for learning backend development concepts and does not include a web interface or mobile application.
+The application is developed as a console-based system using Java and MySQL. It is designed for learning backend
+development concepts and does not include a web interface or mobile application.
 
 ---
 
@@ -54,27 +61,29 @@ This document is prepared for:
 
 ## 1.4 Definitions and Acronyms
 
-| Term | Description |
-|------|-------------|
-| SRS | Software Requirements Specification |
-| OOP | Object-Oriented Programming |
-| JDBC | Java Database Connectivity |
-| CRUD | Create, Read, Update, Delete |
-| DBMS | Database Management System |
-| UI | User Interface |
-| Admin | User responsible for managing the entire system |
-| Customer | User who places food orders |
-| Restaurant | Business that offers food through the system |
-
+| Term       | Description                                     |
+|------------|-------------------------------------------------|
+| SRS        | Software Requirements Specification             |
+| OOP        | Object-Oriented Programming                     |
+| JDBC       | Java Database Connectivity                      |
+| CRUD       | Create, Read, Update, Delete                    |
+| DBMS       | Database Management System                      |
+| UI         | User Interface                                  |
+| Admin      | User responsible for managing the entire system |
+| Customer   | User who places food orders                     |
+| Restaurant | Business that offers food through the system    |
 
 Section 1.4
+
 # 2. Overall Description
 
 ## 2.1 Product Perspective
 
-FoodFlow Backend is an independent console-based application developed using Java. It represents the backend of a food delivery system where users can register, browse restaurants, place food orders, and manage their accounts.
+FoodFlow Backend is an independent console-based application developed using Java. It represents the backend of a food
+delivery system where users can register, browse restaurants, place food orders, and manage their accounts.
 
-The application follows a layered architecture to separate business logic, database operations, and user interaction. This approach keeps the project organized, improves maintainability, and makes future enhancements easier.
+The application follows a layered architecture to separate business logic, database operations, and user interaction.
+This approach keeps the project organized, improves maintainability, and makes future enhancements easier.
 
 The system stores all application data in a MySQL database and communicates with it using JDBC.
 
@@ -144,15 +153,15 @@ The administrator manages the overall system by monitoring customers, restaurant
 
 The application is designed to run in the following environment.
 
-| Component | Requirement |
-|-----------|-------------|
-| Operating System | Windows 10 or later |
-| Programming Language | Java 21 |
-| IDE | IntelliJ IDEA Community Edition |
-| Database | MySQL 8.x |
-| Build Tool | Maven |
-| Version Control | Git |
-| Repository Hosting | GitHub |
+| Component            | Requirement                     |
+|----------------------|---------------------------------|
+| Operating System     | Windows 10 or later             |
+| Programming Language | Java 21                         |
+| IDE                  | IntelliJ IDEA Community Edition |
+| Database             | MySQL 8.x                       |
+| Build Tool           | Maven                           |
+| Version Control      | Git                             |
+| Repository Hosting   | GitHub                          |
 
 ---
 
@@ -181,6 +190,7 @@ The following assumptions are made during development.
 - Internet access is required only for downloading Maven dependencies and pushing code to GitHub.
 
 Section 1.6
+
 # 3. Functional Requirements
 
 The FoodFlow Backend system provides the following functional requirements.
@@ -203,7 +213,8 @@ The system shall allow customers to browse restaurants and view available food i
 
 ### FR-5 Cart Management
 
-The system shall allow customers to add food items to the cart, update quantities, remove items, and view the cart before placing an order.
+The system shall allow customers to add food items to the cart, update quantities, remove items, and view the cart
+before placing an order.
 
 ### FR-6 Order Management
 
@@ -287,6 +298,8 @@ The following features can be added in future versions.
 
 # 7. Conclusion
 
-The Software Requirements Specification defines the overall objectives, scope, functional requirements, and design constraints of the FoodFlow Backend project.
+The Software Requirements Specification defines the overall objectives, scope, functional requirements, and design
+constraints of the FoodFlow Backend project.
 
-This document serves as the foundation for the remaining development phases, including database design, architecture, implementation, testing, and deployment.
+This document serves as the foundation for the remaining development phases, including database design, architecture,
+implementation, testing, and deployment.

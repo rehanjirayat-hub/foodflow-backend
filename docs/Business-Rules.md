@@ -2,14 +2,14 @@
 
 ## Project Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Document | Business Rules |
-| Version | 1.0 |
-| Status | Draft |
-| Prepared By | Mohammed Rehan Anwarsab Jirayat |
-| Last Updated | August 2026 |
+| Field        | Details                         |
+|--------------|---------------------------------|
+| Project Name | FoodFlow Backend                |
+| Document     | Business Rules                  |
+| Version      | 1.0                             |
+| Status       | Draft                           |
+| Prepared By  | Mohammed Rehan Anwarsab Jirayat |
+| Last Updated | August 2026                     |
 
 ---
 
@@ -17,7 +17,9 @@
 
 ## 1.1 Purpose
 
-This document defines the business rules that govern the FoodFlow Backend system. These rules ensure that the application behaves consistently and maintains data integrity. Every rule listed here must be enforced during application development.
+This document defines the business rules that govern the FoodFlow Backend system. These rules ensure that the
+application behaves consistently and maintains data integrity. Every rule listed here must be enforced during
+application development.
 
 ---
 

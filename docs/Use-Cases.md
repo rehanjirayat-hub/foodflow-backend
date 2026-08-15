@@ -2,14 +2,14 @@
 
 ## Document Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Document Name | Use Cases |
-| Version | 1.0 |
-| Status | Draft |
-| Prepared By | Mohammed Rehan Anwarsab Jirayat |
-| Last Updated | August 2026 |
+| Field         | Details                         |
+|---------------|---------------------------------|
+| Project Name  | FoodFlow Backend                |
+| Document Name | Use Cases                       |
+| Version       | 1.0                             |
+| Status        | Draft                           |
+| Prepared By   | Mohammed Rehan Anwarsab Jirayat |
+| Last Updated  | August 2026                     |
 
 ---
 
@@ -17,7 +17,8 @@
 
 ## 1.1 Purpose
 
-This document describes how different users interact with the FoodFlow Backend system. Each use case explains the steps performed by a user and the system to complete a specific task.
+This document describes how different users interact with the FoodFlow Backend system. Each use case explains the steps
+performed by a user and the system to complete a specific task.
 
 ---
 

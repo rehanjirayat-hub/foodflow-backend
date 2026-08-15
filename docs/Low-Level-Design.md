@@ -2,20 +2,22 @@
 
 ## Document Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Document Name | Low-Level Design |
-| Version | 1.0 |
-| Status | Final |
-| Prepared By | Mohammed Rehan Anwarsab Jirayat |
-| Last Updated | August 2026 |
+| Field         | Details                         |
+|---------------|---------------------------------|
+| Project Name  | FoodFlow Backend                |
+| Document Name | Low-Level Design                |
+| Version       | 1.0                             |
+| Status        | Final                           |
+| Prepared By   | Mohammed Rehan Anwarsab Jirayat |
+| Last Updated  | August 2026                     |
 
 ---
 
 # 1. Purpose
 
-This document defines the internal structure of the FoodFlow Backend application. It describes the package organization, Java classes, interfaces, enumerations, custom exceptions, and the relationships between different layers of the application.
+This document defines the internal structure of the FoodFlow Backend application. It describes the package organization,
+Java classes, interfaces, enumerations, custom exceptions, and the relationships between different layers of the
+application.
 
 The Low-Level Design serves as the implementation blueprint for the project.
 
@@ -230,4 +232,5 @@ The project follows these software engineering principles.
 
 # 14. Conclusion
 
-The Low-Level Design defines the internal architecture of the FoodFlow Backend project. It provides a clear structure for implementation and ensures consistency between the project documentation and the Java source code.
+The Low-Level Design defines the internal architecture of the FoodFlow Backend project. It provides a clear structure
+for implementation and ensures consistency between the project documentation and the Java source code.

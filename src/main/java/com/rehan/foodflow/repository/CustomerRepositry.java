@@ -6,7 +6,7 @@ import java.util.List;
 import java.util.Optional;
 
 public interface CustomerRepositry {
-    public Customer save( Customer customer);
+    public Customer save(Customer customer);
 
     public Optional<Customer> findById(long customerId);
 
@@ -19,8 +19,6 @@ public interface CustomerRepositry {
     public boolean update(Customer customer);
 
     public boolean deleteById(long customerId);
-
-
 
 
 }

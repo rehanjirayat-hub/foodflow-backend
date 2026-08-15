@@ -1,4 +1,5 @@
 package com.rehan.foodflow.model;
+
 import com.rehan.foodflow.enums.OrderStatus;
 import com.rehan.foodflow.enums.PaymentMethod;
 import com.rehan.foodflow.enums.PaymentStatus;
@@ -9,7 +10,7 @@ import java.time.LocalDateTime;
 public class Order {
     private long orderId;
     private long customerId;
-    private long  restaurantId;
+    private long restaurantId;
     private BigDecimal totalAmount;
     private OrderStatus orderStatus;
     private LocalDateTime orderDate;

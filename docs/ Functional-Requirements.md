@@ -2,12 +2,12 @@
 
 ## Project Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Document | Functional Requirements |
-| Version | 1.0 |
-| Status | Draft |
+| Field        | Details                 |
+|--------------|-------------------------|
+| Project Name | FoodFlow Backend        |
+| Document     | Functional Requirements |
+| Version      | 1.0                     |
+| Status       | Draft                   |
 
 ---
 
@@ -15,7 +15,9 @@
 
 ## 1.1 Purpose
 
-This document defines the functional requirements of the FoodFlow Backend system. It describes the features the application must provide and the expected behavior of each feature. These requirements will be used during database design, application development, testing, and validation.
+This document defines the functional requirements of the FoodFlow Backend system. It describes the features the
+application must provide and the expected behavior of each feature. These requirements will be used during database
+design, application development, testing, and validation.
 
 ---
 
@@ -25,7 +27,8 @@ The system supports three user roles.
 
 ### Customer
 
-A customer can register, log in, browse restaurants, view food items, manage the cart, place orders, and view order history.
+A customer can register, log in, browse restaurants, view food items, manage the cart, place orders, and view order
+history.
 
 ### Restaurant Manager
 

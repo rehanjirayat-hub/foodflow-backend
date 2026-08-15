@@ -2,22 +2,24 @@
 
 ## Document Information
 
-| Field | Details |
-|-------|---------|
-| Project Name | FoodFlow Backend |
-| Document Name | Entity Relationship Diagram |
-| Version | 1.0 |
-| Status | Draft |
-| Prepared By | Mohammed Rehan Anwarsab Jirayat |
-| Last Updated | August 2026 |
+| Field         | Details                         |
+|---------------|---------------------------------|
+| Project Name  | FoodFlow Backend                |
+| Document Name | Entity Relationship Diagram     |
+| Version       | 1.0                             |
+| Status        | Draft                           |
+| Prepared By   | Mohammed Rehan Anwarsab Jirayat |
+| Last Updated  | August 2026                     |
 
 ---
 
 # 1. Purpose
 
-This document describes the entities and their relationships in the FoodFlow Backend database. The ER Diagram provides a visual representation of how data is organized and how different entities interact with each other.
+This document describes the entities and their relationships in the FoodFlow Backend database. The ER Diagram provides a
+visual representation of how data is organized and how different entities interact with each other.
 
-The ER Diagram is based on the database design and will be used as the reference for creating the MySQL schema and Java model classes.
+The ER Diagram is based on the database design and will be used as the reference for creating the MySQL schema and Java
+model classes.
 
 ---
 
@@ -40,16 +42,16 @@ The FoodFlow Backend system contains the following entities:
 # 3. Entity Relationships
 
 | Parent Entity | Child Entity | Cardinality |
-|--------------|--------------|-------------|
-| Customer | Cart | 1 : 1 |
-| Customer | Order | 1 : N |
-| Restaurant | FoodItem | 1 : N |
-| Restaurant | Order | 1 : N |
-| Cart | CartItem | 1 : N |
-| FoodItem | CartItem | 1 : N |
-| Order | OrderItem | 1 : N |
-| FoodItem | OrderItem | 1 : N |
-| Order | Payment | 1 : 1 |
+|---------------|--------------|-------------|
+| Customer      | Cart         | 1 : 1       |
+| Customer      | Order        | 1 : N       |
+| Restaurant    | FoodItem     | 1 : N       |
+| Restaurant    | Order        | 1 : N       |
+| Cart          | CartItem     | 1 : N       |
+| FoodItem      | CartItem     | 1 : N       |
+| Order         | OrderItem    | 1 : N       |
+| FoodItem      | OrderItem    | 1 : N       |
+| Order         | Payment      | 1 : 1       |
 
 ---
 
@@ -95,10 +97,12 @@ Each order has one corresponding payment record.
 
 # 5. ER Diagram
 
-The visual ER Diagram will be created after the database schema is finalized to ensure consistency with the implemented database design.
+The visual ER Diagram will be created after the database schema is finalized to ensure consistency with the implemented
+database design.
 
 ---
 
 # 6. Conclusion
 
-The ER Diagram defines the relationships among all entities in the FoodFlow Backend system. It serves as a reference for database implementation and helps maintain consistency between the database structure and the application design.
+The ER Diagram defines the relationships among all entities in the FoodFlow Backend system. It serves as a reference for
+database implementation and helps maintain consistency between the database structure and the application design.

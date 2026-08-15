@@ -1,4 +1,5 @@
 package com.rehan.foodflow.util;
+
 import java.sql.*;
 
 public class DatabaseConnection {
@@ -7,21 +8,20 @@ public class DatabaseConnection {
     private static final String USERNAME = "root";
     private static final String PASSWORD = "";
 
-    public static Connection getConnection(){
+    public static Connection getConnection() {
         try {
-             Connection connection = DriverManager.getConnection(
+            Connection connection = DriverManager.getConnection(
                     URl,
                     USERNAME,
                     PASSWORD
             );
-             return connection;
+            return connection;
 
         } catch (SQLException e) {
             throw new RuntimeException(e);
         }
 
     }
-
 
 
 }

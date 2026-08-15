@@ -13,7 +13,7 @@ public class Cart {
     public Cart() {
     }
 
-    public Cart(long customerId, BigDecimal totalAmount){
+    public Cart(long customerId, BigDecimal totalAmount) {
         this.customerId = customerId;
         this.totalAmount = totalAmount;
     }
